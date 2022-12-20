@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Основи JavaScript</title>
+    <link rel="stylesheet" href="../css/common.css" />
+  </head>
+
+  <body>
+    <p><a href="../index.html">На головну</a></p>
+    <hr />
+    <h1>Основи JavaScript</h1>
+    <h2>Структура коду</h2>
+    <p>
+      Інструкції – це синтаксичні конструкції та команди, які виконують дії.
+      <br />
+      Змінна це “іменована частинка сховища”, в якій зберігаються дані.
+      <br />
+      У JavaScript є вісім основних типів даних.
+    </p>
+    <ul>
+      <b>Типи даних:</b>
+      <li>
+        Число (Number) <code>+-2<sup>53</sup> -1</code>
+      </li>
+      <li>BigInt</li>
+      <li>Рядок (String)</li>
+      <li>Булеве значення (Boolean)</li>
+      <li>Null</li>
+      <li>Undefined</li>
+      <li>Object</li>
+      <li>Symbol</li>
+    </ul>
+
+    <p>
+      <i>alert</i> - показуває повідомлення та чекає, доки користувач не натисне
+      кнопку "ОК";
+      <br />
+      <i>prompt</i> - показує модальне вікно з текстовим повідомленням, полем,
+      куди користувач може ввести текст, та кнопками ОК/Скасувати
+      <br />
+      <i>confirm</i> - показуває модальне вікно з питанням question та двома
+      кнопками Ок/Скасувати. Повертає значення true або false
+    </p>
+    <p>
+      <i>Оператор АБО || </i> - повертає перше правдиве значення або останє,
+      якщо правдивого значення не знайдено;
+      <br />
+      <i>Оператор І && </i> - повертає перше хибне значення, або останнє
+      значення, якщо хибних значень не було знайдено;
+    </p>
+
+    <ul>
+      <b>Методи: </b>
+      <li><i>String(value)</i> - перетворює значення в рядок</li>
+      <li><i>Number(value)</i> - перетворює значення в число або NaN</li>
+      <li><i>Boolean(value)</i> - перетворення булеве</li>
+      <li>
+        <i>(+value)</i> - унарний опертатор, який приводить значення в число або
+        NaN
+      </li>
+    </ul>
+    <script src="../js/js-01.js" type="module"></script>
+  </body>
+</html>
