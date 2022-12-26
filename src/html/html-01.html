@@ -205,14 +205,30 @@
       <li><i>Object.keys(obj)</i> - повертає масив ключів об'єкта</li>
       <li><i>Object.values(obj)</i> - повертає масив значень об'єкта</li>
       <li><i>Object.entries(obj)</i> - повертає масив пар [ключ, значення]</li>
-      <li><i></i></li>
-      <li><i></i></li>
-      <li><i></i></li>
-      <li><i></i></li>
-      <li><i></i></li>
-      <li><i></i></li>
-      <li><i></i></li>
-      <li><i></i></li>
+      <li><i>Date().getFullYear()</i> - повертає рік (4 цифри)</li>
+      <li><i>Date().getMonth()</i> - повертає місяць, від 0 до 11</li>
+      <li><i>Date().getDate()</i> - повертає день місяця від 1 до 31</li>
+      <li>
+        <i>Date().getDay()</i> - повертає день тижня, від 0 (неділя) до 6
+        (субота)
+      </li>
+      <li>
+        <i>Date().getTime()</i> - повертає timestamp для дати - кількість ms, що
+        пройшли від 1 січня 1970 UCT +0
+      </li>
+      <li>
+        <i>Date().getTimezoneOffset()</i> - повертає різницю між часовим поясом,
+        у хвилинах
+      </li>
+      <li>
+        <i>Date.now()</i> - без використання NEW повертає поточний timestamp,
+        який не створює проміжного об'єкта Date. Працює швидше і не навантажує
+        "збирач сміття"
+      </li>
+      <li>
+        <i>Date().parse(str)</i> - читає дату з рядка, де формат повинен бути
+        YYYY-MM-DDTHH:mm:ss.sssZ
+      </li>
       <li><i></i></li>
     </ul>
     <script src="../js/js-01.js" type="module"></script>

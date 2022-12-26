@@ -371,3 +371,84 @@ function topSalary({ alex, denis, ann } = {}) {
 }
 
 console.log(topSalary(userSalaries));
+
+// task 22
+// Скільки часу займає виконання циклу
+let start = new Date();
+
+for (let i = 0; i < 100000; i++) {
+  let doSomething = i * i * i;
+}
+
+let end = new Date();
+console.log(`Цикл зайняв ${end - start} мілісекунд`);
+
+// task 23
+// Створити дату 20 лютого 2012, 3:12
+console.log(new Date(2012, 1, 20, 3, 12));
+console.log(new Date('February 20, 2012 03:12:00'));
+
+// task 24
+// Показати робочий день
+function getWeekDay(date) {
+  let days = ['НД', 'ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ'];
+  let dayIndex = date.getDay();
+
+  return days[dayIndex];
+  // return days[dayIndex + 1]; повертає робочий день у Європейсьих країнах
+}
+
+console.log(getWeekDay(new Date(2012, 0, 3)));
+
+// task 25
+// Який день місяця був багато днів тому?
+let date = new Date(2015, 0, 2);
+
+function getDateAgo(date, days) {
+  let dateCopy = new Date(date);
+
+  dateCopy.setDate(date.getDate() - days);
+
+  return dateCopy.getDate();
+}
+
+console.log(getDateAgo(date, 365));
+
+// task 26
+// Функція, яка повертає останій день місяця
+function getLastDayOfTheMonth(year, month) {
+  let date = new Date(year, month + 1, 0);
+
+  return date.getDate();
+}
+
+console.log('Повертає останій день місяця', getLastDayOfTheMonth(2012, 1));
+console.log('Повертає останій день місяця', getLastDayOfTheMonth(2014, 1));
+console.log('Повертає останій день місяця', getLastDayOfTheMonth(2016, 1));
+
+// task 27
+// Скільки секунд пройшло сьогодні
+function getSecondsToday(year, month, day) {
+  let date = new Date(year, month - 1, day).getTime();
+  let now = new Date().getTime();
+  let deltaSeconds = Math.round((now - date) / 1000);
+
+  return deltaSeconds;
+}
+
+console.log(
+  'Повертає кількість секунд що пройшли сьогодні',
+  getSecondsToday(2022, 12, 26)
+);
+
+// task 28
+// Скільки секунд до завтра
+function getSecondsToTomorrow() {
+  let now = new Date();
+  let tomorrow = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1);
+  let delta = Math.round((tomorrow - now) / 1000);
+
+  return delta;
+}
+
+console.log('Повертає кількість секунд до завтра', getSecondsToTomorrow());
