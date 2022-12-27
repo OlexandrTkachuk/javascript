@@ -9,7 +9,6 @@ for (item of buttons) {
 
     if (buttonText == 'x') {
       buttonText = '*';
-
       screenValue += buttonText;
       screen.value = screenValue;
     } else if (buttonText == 'AC') {
@@ -23,3 +22,12 @@ for (item of buttons) {
     }
   });
 }
+
+document.addEventListener('keydown', event => {
+  console.log(event.code);
+
+  if (event.code == 'Escape') {
+    screenValue = '';
+    screen.value = screenValue;
+  }
+});

@@ -452,3 +452,13 @@ function getSecondsToTomorrow() {
 }
 
 console.log('Повертає кількість секунд до завтра', getSecondsToTomorrow());
+
+// task 29
+// Перетворіть об'єкт в json та назад
+user.firstName = 'Alex';
+
+const str = JSON.stringify(user);
+console.log('JSON формат', str);
+
+const strParse = JSON.parse(str);
+console.log('json.parse().. ', strParse);
