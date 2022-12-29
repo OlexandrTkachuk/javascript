@@ -7,7 +7,7 @@ body {
     Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #fafafa;
+  background-color: lightblue;
   color: #212121;
   line-height: 1.5;
 }
@@ -17,7 +17,7 @@ img {
   max-width: 100%;
 }
 
-.container {
+/* .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -27,14 +27,13 @@ img {
   height: 60vh;
   padding: 40px 20px;
 
-  /* border: 1px solid #000; */
   border-radius: 30px;
   background-color: silver;
   margin: 0 auto;
-}
+} */
 
 .search-btn {
-  padding: 15px 30px;
+  padding: 10px 30px;
   border-radius: 10px;
   background-color: tomato;
   color: #ffffff;
@@ -43,8 +42,42 @@ img {
   cursor: pointer;
 }
 
-.card-box {
+.js-form {
+  display: block;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  margin: 0 auto;
+  flex-direction: column;
+  width: 220px;
+}
+
+.js-form input {
+  border: 1px solid orangered;
+  border-radius: 15px;
+  padding: 10px;
+  text-align: center;
+  outline: none;
+}
+
+.search-btn {
+  display: block;
+  margin: 20px auto;
+}
+
+.anime {
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: center;
+  padding: 0;
+  margin: 30px auto;
+  list-style: none;
+  gap: 30px;
+  /* justify-content: center; */
+}
+
+.anime__item {
+  width: 300px;
   text-align: center;
 }

@@ -15,9 +15,10 @@ function onInput(event) {
   const value = event.target.value;
 
   if (value) {
-    fetchAnime(value).then(anime => console.log(createMarkup(anime)));
+    fetchAnime(value).then(anime => createMarkup(anime));
   } else {
     Notify.warning('Please start typing');
+    clearMarkup();
   }
 }
 
@@ -45,4 +46,8 @@ function createMarkup({ data: { attributes } }) {
   `;
 
   refs.box.innerHTML = markup;
+}
+
+function clearMarkup() {
+  refs.box.innerHTML = '';
 }
