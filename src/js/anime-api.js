@@ -38,12 +38,14 @@ function fecthAnime(name) {
 }
 
 function createMarkup(arr) {
-  const markup = arr.map(({ title, image, releaseDate }) => {
+  const markup = arr.map(({ title, image, releaseDate, rating, type }) => {
     return `
       <li class="anime__item">
         <img src="${image}" alt="${title}" width="300" height="450">
         <h3>${title}</h3>
+        <p>${rating}</p>
         <p>${releaseDate}</p>
+        <p>${type}</p>
       </li>
     `;
   });
