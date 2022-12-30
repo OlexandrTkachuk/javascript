@@ -10,11 +10,17 @@ refs.form.addEventListener('submit', onSubmit);
 function onSubmit(event) {
   event.preventDefault();
 
-  const anime = event.currentTarget.elements.search.value;
+  const anime = event.currentTarget.elements.search.value.trim();
 
-  fecthAnime(anime).then(data => {
-    createMarkup(data.results);
-  });
+  if (anime) {
+    console.log('ad');
+
+    fecthAnime(anime).then(data => {
+      createMarkup(data.results);
+    });
+  } else {
+    console.log('sry try to type');
+  }
 }
 
 function fecthAnime(name) {
