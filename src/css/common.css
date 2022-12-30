@@ -66,10 +66,11 @@ img {
 }
 
 .anime {
+  width: 1040px;
   display: flex;
   flex-wrap: wrap;
 
-  justify-content: center;
+  justify-content: space-between;
   padding: 0;
   margin: 30px auto;
   list-style: none;
